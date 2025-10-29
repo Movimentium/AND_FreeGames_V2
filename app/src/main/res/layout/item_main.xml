@@ -23,6 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
+                android:contentDescription="Game image"
                 tools:src="@drawable/imgGame"/>
 
             <TextView
@@ -34,12 +35,41 @@
                 android:padding="8dp"
                 tools:text="Game title"/>
 
+            <TextView
+                android:id="@+id/txtVwDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingBottom="8dp"
+                android:textSize="16sp"
+                tools:text="Game description"/>
 
-
-            <!--Bottom VStack -->
+            <!--HStack -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipGenre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    tools:text="Genre"/>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipPlatform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    tools:text="Platform"/>
 
             </LinearLayout>
         </LinearLayout>
